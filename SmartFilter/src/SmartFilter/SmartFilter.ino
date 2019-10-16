@@ -1,7 +1,16 @@
+#include <FirebaseCloudMessaging.h>
+#include <FirebaseHttpClient.h>
+#include <FirebaseError.h>
+#include <FirebaseObject.h>
+#include <Firebase.h>
+#include <FirebaseArduino.h>
+
+#include <Ethernet.h>
+
 #include <FirebaseArduino.h>
  
 #define FIREBASE_HOST "SmartFilter_PIIV"
-#define FIREBASE_AUTH "VKIZQ2q335nXFk8BdWrlreM1vcx2uhzRyTQWMhq1"
+#define FIREBASE_AUTH "AIzaSyC8XnpzlmYmYtW3Xr5VhV9jS6mYAoH6DxI"
 #define WIFI_SSID "Lem"
 #define WIFI_PASSWORD "naolembro63a"
  
