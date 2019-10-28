@@ -51,3 +51,38 @@ void pushTensao(float tensao){
 void wait(int sec){
   delay(sec * 1000);
 }
+
+void myTimerEvent()// Funcao com calulos basicos de corrente/ potencia e etc...
+{  
+    //Calculos
+    Voltage = getVPP(); // Tenso mV
+    VRMS = (Voltage/2.0) * 0.707; // Calculo da tensao RMS
+    AmpsRMS = (((VRMS * 1000)/mVperAmp)- ruido); //Calculo da corrente
+    double Pot = AmpsRMS * Tensao; //Potencia
+    double kWH = (Pot * 1)/1000;
+
+    //Codicoes para evitar numeros negativos 
+    if(AmpsRMS < 0){
+      AmpsRMS = 0;
+    }
+
+    if(Pot < 0){
+      Pot = 0;
+    }
+
+    if(kWH < 0){
+     kWH = 0; 
+    }
+
+    //Prints e envios de dados
+    Serial.print(AmpsRMS);
+    Serial.println(" Amps RMS");
+    Serial.print(Voltage);
+    Serial.println(" V");
+
+    Blynk.virtualWrite(V0, AmpsRMS);
+    Blynk.virtualWrite(V1, Pot);
+    Blynk.virtualWrite(V2, kWH);
+
+    
+}
