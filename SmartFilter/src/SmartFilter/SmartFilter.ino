@@ -31,10 +31,23 @@ void setup() {
 }
 void loop() {
   
-  int sensorValue = analogRead(A0);   // Ler o pino Analógico A0 onde está o LDR
-  float voltagem = sensorValue * (5 / 1024.0);   // Converter a leitura analógica (que vai de 0 - 1023) para uma voltagem (0 - 3.3V), quanto de acordo com a intensidade de luz no LDR a voltagem diminui.
-  Serial.println(voltagem);   // Mostrar valor da voltagem no monitor serial
-  Firebase.pushFloat("Tensao", voltagem); // Envia o dado da variavel voltagem para a variavel no Firebase
-  delay(5000); 
-  
+  int sensorValue = analogRead(A0);   // Ler o pino Analógico A0 onde está o sensor
+  float valorTratado = trataValor(sensorValue);
+  pushTensao(valorTratado);
+  wait(5);
+}
+
+
+float trataValor(int valorLido){
+   float result = valorLido * (5/1024);
+   Serial.printl(result);
+   return result;
+}
+
+void pushTensao(float tensao){
+  Firebase.pushFloat("Tensao",tensao);
+}
+
+void wait(int sec){
+  delay(sec * 1000);
 }
