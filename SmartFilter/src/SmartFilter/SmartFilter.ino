@@ -11,7 +11,7 @@
  
 #define FIREBASE_HOST "SmartFilter_PIIV"
 #define FIREBASE_AUTH "firebaseAuth"
-#define WIFI_SSID "yyyyyyy"
+#define WIFI_SSID "yyyyyyz"
 #define WIFI_PASSWORD "xxxxx"
  
 void setup() {
