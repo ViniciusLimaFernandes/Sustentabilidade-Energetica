@@ -10,8 +10,8 @@
 #include <FirebaseArduino.h>
  
 #define FIREBASE_HOST "SmartFilter_PIIV"
-#define FIREBASE_AUTH "xxxxxxxx"
-#define WIFI_SSID "xxxxx"
+#define FIREBASE_AUTH "firebaseAuth"
+#define WIFI_SSID "yyyyyyy"
 #define WIFI_PASSWORD "xxxxx"
  
 void setup() {
