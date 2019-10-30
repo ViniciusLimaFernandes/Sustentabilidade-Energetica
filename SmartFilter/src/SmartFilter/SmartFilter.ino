@@ -1,18 +1,10 @@
-#include <FirebaseCloudMessaging.h>
-#include <FirebaseHttpClient.h>
-#include <FirebaseError.h>
-#include <FirebaseObject.h>
-#include <Firebase.h>
+#include <ESP8266WiFi.h>
 #include <FirebaseArduino.h>
 
-#include <Ethernet.h>
-
-#include <FirebaseArduino.h>
- 
-#define FIREBASE_HOST "SmartFilter_PIIV"
-#define FIREBASE_AUTH "firebaseAuth"
-#define WIFI_SSID "yyyyyyz"
-#define WIFI_PASSWORD "xxxxx"
+#define FIREBASE_HOST "x"
+#define FIREBASE_AUTH "x"
+#define WIFI_SSID "x"
+#define WIFI_PASSWORD "x"
  
 void setup() {
   Serial.begin(9600);
@@ -31,10 +23,23 @@ void setup() {
 }
 void loop() {
   
-  int sensorValue = analogRead(A0);   // Ler o pino Analógico A0 onde está o LDR
-  float voltagem = sensorValue * (5 / 1024.0);   // Converter a leitura analógica (que vai de 0 - 1023) para uma voltagem (0 - 3.3V), quanto de acordo com a intensidade de luz no LDR a voltagem diminui.
-  Serial.println(voltagem);   // Mostrar valor da voltagem no monitor serial
-  Firebase.pushFloat("Tensao", voltagem); // Envia o dado da variavel voltagem para a variavel no Firebase
-  delay(5000); 
+  int sensorValue = analogRead(A0);   // Ler o pino Analógico A0 onde está o sensor
+  float valorTratado = trataValor(sensorValue);
+  pushTensao(valorTratado);
+  wait(5);
   
+}
+
+float trataValor(int valorLido){
+   float result = valorLido * (5/1024);
+   Serial.println(result);
+   return result;
+}
+
+void pushTensao(float tensao){
+  Firebase.pushFloat("Tensao",tensao);
+}
+
+void wait(int sec){
+  delay(sec * 1000);
 }
