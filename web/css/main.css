@@ -1,0 +1,22 @@
+.navbar-custom {
+  background: #e14eca;
+  background-image: -webkit-linear-gradient(to bottom left, #ec780b, #b637a3, #e14eca);
+  background-image: -o-linear-gradient(to bottom left, #ec780b, #b637a3, #e14eca);
+  background-image: -moz-linear-gradient(to bottom left, #ec780b, #b637a3, #e14eca);
+  background-image: linear-gradient(to bottom left, #ec780b, #b637a3, #e14eca);
+}
+
+.navbar-custom a{
+    color: #f7f7f7;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+body {
+    background: #383838;
+    color:#ffffff;
+}
+
+.jumbotron{
+    background: #4d4d4d;
+}
