@@ -1,9 +1,9 @@
 .navbar-custom {
-  background: #1b990b;
-  background-image: -webkit-linear-gradient(to bottom left, #ec780b, #b637a3, #e14eca);
-  background-image: -o-linear-gradient(to bottom left, #ec780b, #b637a3, #e14eca);
-  background-image: -moz-linear-gradient(to bottom left, #ec780b, #b637a3, #e14eca);
-  background-image: linear-gradient(to bottom left, #ec780b, #b637a3, #e14eca);
+  background: #313131;
+  background-image: -webkit-linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
+  background-image: -o-linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
+  background-image: -moz-linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
+  background-image: linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
   margin: auto;
 }
 
