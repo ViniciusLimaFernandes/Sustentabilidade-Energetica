@@ -2,7 +2,6 @@
 #include <FirebaseArduino.h>
 
 //Definicoes
-#define BLYNK_PRINT Serial
 #define Pin_rele     D2             // Define o pino do rele
 #define Pin_acs712   A0             // Define o pino do sensor de corrente
 #define FIREBASE_HOST "x"
