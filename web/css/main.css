@@ -54,3 +54,15 @@ body {
     width: 60px;
     height: 60px;
 }
+
+#custo{
+    color: rgb(255, 99, 132);
+}
+
+#consumo{
+    color: rgb(255, 99, 132);
+}
+
+#cardSub {
+    font-size: 10px;
+}

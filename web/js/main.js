@@ -8,11 +8,16 @@ firebase.on('value', function(snapshot) {
 
 	drawGraph(corrente, Object.keys(snapshot.val().corrente));
 
-	document.getElementById('potencia').innerText =
-		220 * corrente[corrente.length - 1];
+	const kwhPrice = 0.25588;
+	var potencia = 220 * corrente[corrente.length - 1];
+	var corrente = corrente[corrente.length - 1];
+	var consumo = (potencia * 24 * 30) / 1000;
+	var custo = consumo * kwhPrice;
 
-	document.getElementById('corrente').innerText =
-		corrente[corrente.length - 1];
+	document.getElementById('potencia').innerText = potencia;
+	document.getElementById('corrente').innerText = corrente;
+	document.getElementById('consumo').innerText = consumo.toFixed(2);
+	document.getElementById('custo').innerText = custo.toFixed(2);
 });
 
 function drawGraph(corrente = [], tempo = []) {
