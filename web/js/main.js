@@ -9,7 +9,10 @@ firebase.on('value', function(snapshot) {
 	drawGraph(corrente, Object.keys(snapshot.val().corrente));
 
 	document.getElementById('potencia').innerText =
-		127 * corrente[corrente.length - 1];
+		220 * corrente[corrente.length - 1];
+
+	document.getElementById('corrente').innerText =
+		corrente[corrente.length - 1];
 });
 
 function drawGraph(corrente = [], tempo = []) {

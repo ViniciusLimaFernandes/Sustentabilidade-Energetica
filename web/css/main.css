@@ -1,9 +1,9 @@
 .navbar-custom {
-  background: #313131;
-  background-image: -webkit-linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
+  background: #f3f3f3;
+  /* background-image: -webkit-linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
   background-image: -o-linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
   background-image: -moz-linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
-  background-image: linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb);
+  background-image: linear-gradient(to bottom left, #1d1d1d, #3d3d3d, #dbdbdb); */
   margin: auto;
 }
 
@@ -24,4 +24,33 @@ body {
 
 #potencia{
     color: rgb(255, 99, 132);
+}
+
+#potenciaCard{
+    background: rgb(73, 73, 73);
+    text-align: center;
+}
+
+#PotenciaCardTitle {
+    font-size: 30px;
+    color:#fcfcfc; 
+}
+
+#potenciaLogo {
+    width: 60px;
+    height: 60px;
+}
+
+#corrente{
+    color: rgb(255, 99, 132);
+}
+
+#correnteCard{
+    background: rgb(73, 73, 73);
+    text-align: center;
+}
+
+#correnteLogo {
+    width: 60px;
+    height: 60px;
 }
