@@ -26,14 +26,19 @@ body {
     color: rgb(255, 99, 132);
 }
 
-#potenciaCard{
+#cardsGeneral{
     background: rgb(73, 73, 73);
     text-align: center;
 }
 
-#PotenciaCardTitle {
-    font-size: 30px;
+#cardsTitle {
+    font-size: 17px;
+    font-weight: bold;
     color:#fcfcfc; 
+}
+
+#cardsContent {
+    font-size: 16px;
 }
 
 #potenciaLogo {
@@ -43,11 +48,6 @@ body {
 
 #corrente{
     color: rgb(255, 99, 132);
-}
-
-#correnteCard{
-    background: rgb(73, 73, 73);
-    text-align: center;
 }
 
 #correnteLogo {
