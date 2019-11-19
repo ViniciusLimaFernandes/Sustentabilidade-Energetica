@@ -67,3 +67,8 @@ body {
 #cardSub {
     font-size: 10px;
 }
+
+#dashTitle {
+    font-size: 30px;
+    font-weight: bold;
+}
