@@ -29,6 +29,7 @@ body {
 #cardsGeneral{
     background: rgb(73, 73, 73);
     text-align: center;
+    height: 140px;
 }
 
 #cardsTitle {
