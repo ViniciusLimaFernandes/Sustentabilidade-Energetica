@@ -14,8 +14,8 @@ firebase.on('value', function(snapshot) {
 	var consumo = (potencia * 24 * 30) / 1000;
 	var custo = consumo * kwhPrice;
 
-	document.getElementById('potencia').innerText = potencia;
-	document.getElementById('corrente').innerText = corrente;
+	document.getElementById('potencia').innerText = potencia.toFixed(2);
+	document.getElementById('corrente').innerText = corrente.toFixed(2);
 	document.getElementById('consumo').innerText = consumo.toFixed(2);
 	document.getElementById('custo').innerText = custo.toFixed(2);
 });
