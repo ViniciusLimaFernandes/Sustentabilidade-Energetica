@@ -1,9 +1,9 @@
 var corrente = [];
-var firebase = new Firebase('proc-project.firebaseio.com/');
+var firebase = new Firebase('pi4-project.firebaseio.com/');
 firebase.on('value', function(snapshot) {
 	corrente = [];
 	for (let i in snapshot.val().corrente) {
-		corrente.push(parseFloat(snapshot.val().corrente[i].replace(/,/, '.')));
+		corrente.push(snapshot.val().corrente[i]);
 	}
 
 	drawGraph(corrente, Object.keys(snapshot.val().corrente));
@@ -23,7 +23,9 @@ firebase.on('value', function(snapshot) {
 function drawGraph(corrente = [], tempo = []) {
 	var labels = [];
 	tempo.forEach(t => {
-		var data = new Date(parseInt(t));
+		var data = new Date((parseFloat(t)*1000));
+		console.log("Data = ", parseFloat(t));
+		console.log("Formated Data = ", (parseFloat(t)*1000));
 		labels.push(data.toLocaleString());
 	});
 
