@@ -72,3 +72,12 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
+
+#chartContainer {
+    height: 450px;
+    margin-bottom: 50px;
+}
+
+#cardsRow {
+    align-content: center;
+}
